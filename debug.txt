@@ -1,0 +1,49 @@
+TP5 réalisé par Colette Voisembert et Vincent Nicol
+
+EXERCICE 5)
+
+Question 2)
+	On observe qu'il n'y a pas de fuite mémoires.
+
+Question 3)
+
+HEAP SUMMARY:
+
+Cette ligne nous indique la mémoire qui est encore alloué au programme à la fin de son exécution :
+
+==5547==     in use at exit: 0 bytes in 0 blocks
+
+Cette ligne nous indique le nombre d'allocation et de libération effectué par le programme et le nombre de bytes total alloué
+
+==5547==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+
+Cette ligne nous indique que toute les mémoires allouées ont été libérées (ou pas) 
+
+==5547== All heap blocks were freed -- no leaks are possible
+
+Cette ligne nous indique que si l'on veut un decompte des erreurs detectées et supprimées il faut l'option -v
+
+==5547== For counts of detected and suppressed errors, rerun with: -v
+
+Cette ligne est un résumé des lignes précédentes
+
+==5547== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+Question 5)
+	L'erreur se trouve dans le programme C à la ligne : 6
+Valgrind nous indique que l'erreur est dans la fonction main. Il nous indique également que ce n'est pas une erreur de mémoire mais de segmentation et qu'il y a une seule erreur
+
+Question 6)
+	L'erreur était un manque d'allocation mémoire on peut la corriger en rajoutant la ligne suivante :  p=(int *) malloc (size*sizeof(int));
+
+Question 7)
+	L'erreur était que la mémoire était libérée avant que sum puisse utiliser le contenu du tableau. Nous avons donc déplacer la ligne : "free(p);" après la boucle sum.
+
+Question 8)
+	L'erreur retournée est une fuite mémoire, plus d'allocations que de libérations
+
+Question 9/10)
+	D'après valgrind il n'y a pas de ligne fautive
+	L'erreur était que le pointeur p ne voyait pas sa mémoire allouée libérée. En rajoutant la ligne : "free(p);" à la fin du programme l'erreur est corrigée.
+
+

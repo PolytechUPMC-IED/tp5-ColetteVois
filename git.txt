@@ -1,0 +1,67 @@
+TP5 réalisé par Colette Voisembert et Vincent Nicol
+
+EXERCICE 1
+
+Question 2)
+	Le répertoire qui a été créé est un répertoire caché .git
+
+Question 3)
+	On tape la commande : touch fichier.txt
+
+Question 4)
+	Le fichier se trouve sur le workspace mais il n'a pas encore été ajouter au server git défini. Il faut taper la commande git add. C'est un fichier non suivis.
+
+Question 5)
+	Le fichier est maintenant ajouté au server. Il fait partit de la liste des modifications qui seront validées.
+
+Question 6)
+	Après avoir commité notre fichier avec un message, il n'y a plus rien à valider, la copie de travail est propre.
+
+Question 7)
+	Le répertoire est propre il n'y a plus rien à valider. Les modifications sont sauver.
+
+Question 8)
+	La commande : git log -p permet d'afficher les date de dernières modifications avec le message commité.
+
+Question 9)
+	$echo "bonjour">>fichier.txt	
+	Les modifications non commitées ultérieurement sont indiquées sur le terminal grâce à la commande git diff.
+
+EXERCICE 2
+
+Question 2)
+	$echo "c'est super">>fichier.txt
+
+Question 3)
+	$git checkout test
+	$touch fichier2.txt
+	$git add fichier2.txt
+	$git commit -m "C'est changé !*"
+
+Question 4)
+	Cette commande nous montre la branche sur laquelle on est (grace au flag HEAD indiqué devant le nom de la branche) ainsi que les différents commit et branches sur lesquelles ils ont été effectués.
+
+Question 6)
+	Le merge donne un conflit de fusion du fichier.
+
+Question 7)
+	On modifie les fichiers pour qu'ils soient identiques puis on merge le tout.
+
+EXERCICE 4
+
+Question 1)
+	CC contient la commande gcc
+	CFLAGS contient la commande -O3 -Wall -funroll-loops
+	LDLIBS contient la commande -lpng
+
+	VOIR MAKEFILE
+
+
+
+
+
+
+
+
+
+
